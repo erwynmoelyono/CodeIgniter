@@ -21,4 +21,6 @@ $route['employee/delete/(:any)'] = 'Frontend/EmployeeController/delete/$1';
 
 $route['employee/confirmDelete']['POST'] = 'Frontend/EmployeeController/confirmDelete';
 
+// Login and Register for User and Admin Route
+
 

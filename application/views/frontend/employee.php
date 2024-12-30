@@ -2,20 +2,23 @@
 	<div class="row">
 		<div class="col-md-12 mt-4">
 			<div class="card">
+				<?php if ($this->session->flashdata("status")): ?>
+					<div class="alert alert-success">
+						<?= $this->session->flashdata("status") ?>
+					</div>
+				<?php endif; ?>
 				<div class="card-header d-flex justify-content-between fw-bold align-items-center">
 
-					How to insert data into database
+					Employee Data
 					<a href="<?php echo base_url("employee/add") ?>" class="btn btn-primary ">Add
 						Employee</a>
 
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table table-striped table-hover table-borderless table-primary align-middle">
+						<table class="table table-striped table-hover table-borderless table-primary align-middle"
+							id="data-table">
 							<thead class="table-light">
-								<caption>
-									Employee Table
-								</caption>
 								<tr>
 									<th>No.</th>
 									<th>First Name</th>
